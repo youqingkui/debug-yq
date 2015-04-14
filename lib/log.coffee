@@ -6,8 +6,8 @@ errorLog = fs.createWriteStream '../logs/error.log',
 module.exports = (debug) ->
   debug.error = (body='') ->
     debug.color = 1
-
     debug(body)
+    debug.color = 6
 
     body = String(body)
     write =
@@ -17,7 +17,7 @@ module.exports = (debug) ->
     body = JSON.stringify(write)
     errorLog.write body + '\n'
 
-#    email.send(body)
+    email.send(body)
 
 
 
