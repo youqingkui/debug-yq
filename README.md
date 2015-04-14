@@ -1,2 +1,3 @@
 # log
-log info
+
+Expand debug for need
