@@ -1,0 +1,2 @@
+# log
+log info
