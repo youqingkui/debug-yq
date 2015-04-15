@@ -4,11 +4,17 @@
 
   debug = require('debug')("app:test");
 
-  log = require('../lib/log')(debug);
+  log = require('debug')('app:log');
 
-  console.log(debug);
+  require('../lib/log')(debug);
+
+  require('../lib/log')(log);
 
   debug.error("123");
+
+  debug.error("youqing");
+
+  log.error("log error");
 
 }).call(this);
 
